@@ -1,0 +1,91 @@
+<ion-content>
+  <div id="menuProgramacao">
+    <button ion-button clear menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </div>
+
+  <ion-segment [(ngModel)]="progamacaoNuvem" round>
+    <ion-segment-button value="dia1">
+      <h6>PRIMEIRO DIA</h6>
+    </ion-segment-button>
+    <ion-segment-button value="dia2">
+      <h6>SEGUNDO DIA</h6>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="progamacaoNuvem">
+    <ion-list *ngSwitchCase="'dia1'">
+      <ion-item>
+        <h2>Cadastramento</h2>
+        <label item-end>19h</label>
+        <p>Cadastramento dos conferencistas.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Abertura</h2>
+        <label item-end>20h</label>
+        <p>Abertura da #CN17.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Show - Rede Nuvem</h2>
+        <label item-end>20h15</label>
+        <p>Banda Rede Nuvem da Cidade Viva.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Palestra Sérgio Queiroz</h2>
+        <label item-end>21h</label>
+        <p>Eixo Esperança.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Intervalo</h2>
+        <label item-end>21h45</label>
+        <p>Hora de encher o buxo.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Show - Rosa de Saron</h2>
+        <label item-end>22h</label>
+        <p>Banda Rosa de Saron</p>
+      </ion-item>
+      <ion-item>
+        <h2>Encerramento</h2>
+        <label item-end>23h</label>
+        <p>Vlw. Flw galera!</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'dia2'">
+        <ion-item>
+            <h2>Abertura</h2>
+            <label item-end>20h</label>
+            <p>Abertura da #CN17.</p>
+          </ion-item>
+          <ion-item>
+            <h2>Show - Rede Nuvem</h2>
+            <label item-end>20h15</label>
+            <p>Banda Rede Nuvem da Cidade Viva.</p>
+          </ion-item>
+          <ion-item>
+            <h2>Palestra Sérgio Queiroz</h2>
+            <label item-end>21h</label>
+            <p>Eixo Esperança.</p>
+          </ion-item>
+          <ion-item>
+            <h2>Intervalo</h2>
+            <label item-end>21h45</label>
+            <p>Hora de encher o buxo.</p>
+          </ion-item>
+          <ion-item>
+            <h2>Show - Rosa de Saron</h2>
+            <label item-end>22h</label>
+            <p>Banda Rosa de Saron</p>
+          </ion-item>
+          <ion-item>
+            <h2>Encerramento</h2>
+            <label item-end>23h</label>
+            <p>Vlw. Flw galera!</p>
+          </ion-item>
+    </ion-list>
+
+  </div>
+
+</ion-content>

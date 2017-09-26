@@ -1,0 +1,14 @@
+page-intro {
+    .scroll-content {
+        overflow: hidden;
+      }
+     
+    ion-content{
+        background: url(../assets/img/backSlide.png) !important;
+    }
+    
+    p {
+        text-align: justify;
+        color: aliceblue; 
+    }
+}

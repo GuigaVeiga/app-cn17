@@ -1,0 +1,22 @@
+<ion-content>
+  <div id="menuPalestrantes">
+        <button ion-button clear menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+  </div>
+
+ <ion-card *ngFor="let palestrante of palestrantes">
+
+    <img [src]="palestrante.img" />
+
+    <ion-card-content>
+      <ion-card-title>
+          {{ palestrante.nome }} 
+      </ion-card-title>
+      <p>
+          {{ palestrante.sobre }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

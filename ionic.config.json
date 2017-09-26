@@ -1,0 +1,8 @@
+{
+  "name": "CN17",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

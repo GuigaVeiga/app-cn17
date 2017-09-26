@@ -1,0 +1,33 @@
+page-login {
+    .scroll-content {
+        overflow: hidden;
+      }
+    
+    ion-content{
+        background: url(/assets/img/backSlide.png) !important;
+    } 
+
+  ion-img, ion-item, ion-label, ion-toolbar, ion-segment-button {
+    background-color: transparent !important;
+  }
+
+  ion-input, .strike{
+      color: white;
+  }
+
+  .strike {
+      text-align: center;
+  }
+    
+    img {
+        margin: 10% 3% 5% 35%;
+    }
+
+    .botao-login{
+        margin: 10% 10% 5% 10%;
+    }
+    
+    #button-fb{
+        margin-top: 10%;
+    }
+}

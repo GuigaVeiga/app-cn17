@@ -1,0 +1,25 @@
+page-bandas {
+    .scroll-content {
+        overflow: hidden;
+      }
+
+    ion-content{
+        background: url(/assets/img/backSlide.png) !important;
+    }
+    
+    #menuBandas{
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    h2, p {
+        text-align: center justify;
+        color: aliceblue; 
+    }
+
+}

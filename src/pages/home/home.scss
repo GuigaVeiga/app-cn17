@@ -1,0 +1,24 @@
+page-home {
+
+    #menuSobre{
+        background-image: url(/assets/img/capa-sobre.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        height: 55%;
+    }
+    #sobre-cn17 {
+        text-align: justify;
+        font-size: 12pt;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #bemvindo-home{
+        text-align: center;
+    }
+
+    .destaque-home{
+        font-weight: bold;
+    }
+
+}
