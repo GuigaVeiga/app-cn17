@@ -98,4 +98,5 @@
         <variable name="APP_NAME" value="CN17" />
     </plugin>
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3" />
+    <engine name="android" spec="~6.2.3" />
 </widget>
