@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
-import { AngularFireAuth } from "angularfire2/auth";
-import { AngularFireDatabase } from "angularfire2/database";
-import { Facebook } from '@ionic-native/facebook';
+import { ToastController } from 'ionic-angular';
 import { User } from "../../models/user";
 import { HomePage } from "../home/home";
-import firebase from 'firebase'; 
 import { Profile } from "../../models/profile";
+import { AuthService } from '../../services/auth.service';
+import 'rxjs/add/operator/map';
 
 @IonicPage()
 @Component({
@@ -14,58 +13,54 @@ import { Profile } from "../../models/profile";
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  loginCadasro: string = "cadastro";
-  isAndroid: boolean = false;
+    loginCadasro: string = "cadastro";
+    isAndroid: boolean = false;
 
-  user = {} as User;
-  profile = {} as Profile;
+    user = {} as User;
+    profile = {} as Profile;
 
-  constructor(private afAuth: AngularFireAuth,
-    private afDatabase: AngularFireDatabase,
-    private facebook: Facebook,
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public platform: Platform) {}
+    constructor(
+        private auth: AuthService,
+        public navCtrl: NavController,
+        public navParams: NavParams,
+        public platform: Platform,
+        private toastCtrl: ToastController
+    ) { }
 
-
-  async login(user: User) {
-    try {
-      const results = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.senha);
-      if (results) {
-        this.navCtrl.setRoot(HomePage);
-      }
-    } catch (e) {
-      console.error(e);
+    async login(user: User) {
+        this.auth.autenticar(user).then(res => {
+            this.navCtrl.setRoot(HomePage);
+        }, err => {
+            if (err.error === 'UNKNOWN_USERNAME' || err.error === 'WRONG_PASSWORD') {
+                this.showToast(err.message);
+            } else {
+                this.showToast('Ops, não foi possível realizar a autenticação, tente novamente mais tarde');
+                console.error(err);
+            }
+        });
     }
-  }
 
-  loginFacebook() {
-    this.facebook.login(["email"]).then((loginResponse) => {
-      let credencial = firebase.auth.FacebookAuthProvider.credential(loginResponse.authResponse.accessToken);
+    loginFacebook() { }
 
-      firebase.auth().signInWithCredential(credencial).then((info) => {
-        alert(JSON.stringify(info));
-      })
-    })
-
-  }
-  async registrar(user: User) {
-    try {
-      const results = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.senha);
-      console.log(results);
-      if (results) {
-        this.salvarProfile();
-        this.navCtrl.setRoot('LoginPage');
-      }
-    } catch (e) {
-      console.error(e);
+    async registrar(user: User, profile: Profile) {
+        this.auth.cadastrar(user, profile).then(res => {
+            this.navCtrl.setRoot('LoginPage');
+        }, err => {
+            if (err.error) {
+                this.showToast(err.message);
+            } else {
+                this.showToast('Ops, não foi possível realizar o cadastro, tente novamente mais tarde');
+                console.error(err);
+            }
+        });
     }
-  }
 
-  salvarProfile(){
-    this.afAuth.authState.take(1).subscribe(auth =>{
-      this.afDatabase.object(`usuarios/${auth.uid}`).set(this.profile);
-    })
-  }
-
-} 
+    showToast(message: string) {
+        let toast = this.toastCtrl.create({
+            message: message,
+            duration: 3000,
+            position: 'middle'
+        });
+        toast.present();
+    }
+}
