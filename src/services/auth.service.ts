@@ -16,15 +16,19 @@ export class AuthService {
             this.usuario = JSON.parse(data);
     }
 
-    autenticar(credenciais: User): Promise<any> {
+    entrar(credenciais: User): Promise<any> {
         return new Promise((resolve, reject) => {
-            this.http.post('http://cidadeviva.space/api/login', credenciais)
+            this.http.post('http://cidadeviva.space/api/v1/usuario/entrar', credenciais)
                 .map((res: Response) => res.json())
                 .subscribe(res => {
                     localStorage.setItem('cn17_data', JSON.stringify(res));
                     resolve(res);
                 }, err => {
-                    reject(JSON.parse(err.text()));
+                    try {
+                        reject(JSON.parse(err.text()));
+                    } catch(e) {
+                        reject(err.text());
+                    }
                 });
         });
     }
@@ -38,12 +42,16 @@ export class AuthService {
                 nome_completo: profile.nome
             };
 
-            this.http.post('http://cidadeviva.space/api/cadastrar', params)
+            this.http.post('http://cidadeviva.space/api/v1/usuario/cadastrar', params)
                 .map((res: Response) => res.json())
                 .subscribe(res => {
                     resolve(res);
                 }, err => {
-                    reject(JSON.parse(err.text()));
+                    try {
+                        reject(JSON.parse(err.text()));
+                    } catch(e) {
+                        reject(err.text());
+                    }
                 });
         });
     }
