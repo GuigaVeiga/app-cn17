@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
-import { ToastController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 import { User } from "../../models/user";
 import { HomePage } from "../home/home";
 import { Profile } from "../../models/profile";
@@ -24,17 +24,17 @@ export class LoginPage {
         public navCtrl: NavController,
         public navParams: NavParams,
         public platform: Platform,
-        private toastCtrl: ToastController
+        private alertCtrl: AlertController
     ) { }
 
     async login(user: User) {
-        this.auth.autenticar(user).then(res => {
+        this.auth.entrar(user).then(res => {
             this.navCtrl.setRoot(HomePage);
         }, err => {
-            if (err.error === 'UNKNOWN_USERNAME' || err.error === 'WRONG_PASSWORD') {
-                this.showToast(err.message);
+            if (err.code === 'ERROR') {
+                this.showAlert(err.message);
             } else {
-                this.showToast('Ops, não foi possível realizar a autenticação, tente novamente mais tarde');
+                this.showAlert('Ops, não foi possível realizar a autenticação, tente novamente mais tarde');
                 console.error(err);
             }
         });
@@ -46,21 +46,23 @@ export class LoginPage {
         this.auth.cadastrar(user, profile).then(res => {
             this.navCtrl.setRoot('LoginPage');
         }, err => {
-            if (err.error) {
-                this.showToast(err.message);
+            if (err.code === 'ERROR') {
+                console.log('erro:', err);
+                this.showAlert(err.message);
             } else {
-                this.showToast('Ops, não foi possível realizar o cadastro, tente novamente mais tarde');
+                this.showAlert('Ops, não foi possível realizar o cadastro, tente novamente mais tarde');
                 console.error(err);
             }
         });
     }
 
-    showToast(message: string) {
-        let toast = this.toastCtrl.create({
-            message: message,
-            duration: 3000,
-            position: 'middle'
+    showAlert(message: string): void {
+        console.log('toast:', message);
+        let alert = this.alertCtrl.create({
+            title: 'Erro',
+            subTitle: message,
+            buttons: ['OK']
         });
-        toast.present();
+        alert.present();
     }
 }
