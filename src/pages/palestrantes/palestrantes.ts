@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EixoFePage } from "../eixo-fe/eixo-fe";
+import { EixoAmorPage } from "../eixo-amor/eixo-amor";
+import { EixoEsperancaPage } from "../eixo-esperanca/eixo-esperanca";
 
 /**
  * Generated class for the PalestrantesPage page.
@@ -15,14 +18,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PalestrantesPage {
   palestrantes: Array<{nome: string, sobre: string, img: string}>;
-
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.palestrantes = [
-      { nome:"Yago Martins", 
-        sobre:"Yago Martins é bacharel em Teologia pela Faculdade Teológica Sul-Americana (Londrina/PR), pós-graduando em Escola Austríaca de Economia pelo Centro Universitário Ítalo Brasileiro, em parceria com o Instituto Ludwig von Mises Brasil (São Paulo/SP) e estudante do Sacrae Theologiae Magister (Th.M) em Teologia Sistemática do Instituto Aubrey Clark (Fortaleza/CE).",
-        img:"assets/img/yago-martins.jpg"
-      },
+      
       { nome:"Felipe Vilela", 
         sobre:"Felipe é Rapper, Escritor e Coordenador do Missão África, que contribui de forma diferenciada para o desenvolvimento do ser humano em sua totalidade, promovendo justiça social; Pastor no Ministério MEVAM, que realiza missões evangelísticas em Itajaí-SC, mas já está em Países como Estados Unidos, nos continentes Europeu e Africano.", 
         img:"assets/img/felipe-vilela.jpg"
@@ -52,6 +52,18 @@ export class PalestrantesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PalestrantesPage');
+  }
+
+  goEixoFe(){
+    this.navCtrl.push(EixoFePage);
+  }
+
+  goEixoAmor(){
+    this.navCtrl.push(EixoAmorPage);
+  }
+
+  goEixoEsperanca(){
+    this.navCtrl.push(EixoEsperancaPage);
   }
 
 }

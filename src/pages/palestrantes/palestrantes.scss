@@ -1,13 +1,23 @@
-page-palestrantes {
-    ion-content{
-        background: url(/assets/img/backSlide.png) !important;
-    } 
+page-palestrantes { 
 
     #menuPalestrantes{
-        background-image: url(/assets/img/logo.png);
+        background-image: url(/assets/img/img-programacao.png);
         background-repeat: no-repeat;
-        background-position: center;
         background-size: 100%;
-        height: 35%;
+        height: 22%;
     }
+
+    #img-palestrantes-nome{
+        position: absolute;
+        top: 25px;
+    }
+
+  img {
+      width: 100%;
+  }
+  
+  #eixo-fe, #eixo-amor, #eixo-esperanca{
+      height: 25%;
+  }
+    
 }

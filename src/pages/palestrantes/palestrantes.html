@@ -1,22 +1,24 @@
+
 <ion-content>
-  <div id="menuPalestrantes">
+    <div id="menuPalestrantes">
         <button ion-button clear menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-  </div>
+        <div id="img-palestrantes-nome">
+            <img src="/assets/img/img-palestrantes-nome.png">
+          </div>
+     </div>
 
- <ion-card *ngFor="let palestrante of palestrantes">
+      <div id="eixo-fe">
+        <img src="/assets/img/img-eixo-fe.png" (click)="goEixoFe()">
+      </div>
 
-    <img [src]="palestrante.img" />
+      <div id="eixo-amor">
+        <img src="/assets/img/img-eixo-amor.png" (click)="goEixoAmor()">
+      </div>
 
-    <ion-card-content>
-      <ion-card-title>
-          {{ palestrante.nome }} 
-      </ion-card-title>
-      <p>
-          {{ palestrante.sobre }}
-      </p>
-    </ion-card-content>
-  </ion-card>
+      <div id="eixo-esperanca">
+        <img src="/assets/img/img-eixo-esperanca.png" (click)="goEixoEsperanca()">
+      </div>
 
 </ion-content>
