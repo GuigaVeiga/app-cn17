@@ -5,6 +5,7 @@ import { User } from "../../models/user";
 import { HomePage } from "../home/home";
 import { Profile } from "../../models/profile";
 import { AuthService } from '../../services/auth.service';
+import { LoadingController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
 @IonicPage()
@@ -24,13 +25,21 @@ export class LoginPage {
         public navCtrl: NavController,
         public navParams: NavParams,
         public platform: Platform,
-        private alertCtrl: AlertController
+        private alertCtrl: AlertController,
+        private loadingCtrl: LoadingController
     ) { }
 
     async login(user: User) {
+        const loading = this.loadingCtrl.create({
+            content: 'Autenticando, aguarde...'
+        });
+        loading.present();
+
         this.auth.entrar(user).then(res => {
+            loading.dismiss();
             this.navCtrl.setRoot(HomePage);
         }, err => {
+            loading.dismiss();
             if (err.code === 'ERROR') {
                 this.showAlert(err.message);
             } else {
@@ -43,9 +52,16 @@ export class LoginPage {
     loginFacebook() { }
 
     async registrar(user: User, profile: Profile) {
+        const loading = this.loadingCtrl.create({
+            content: 'Cadastrando, aguarde...'
+        });
+        loading.present();
+
         this.auth.cadastrar(user, profile).then(res => {
             this.navCtrl.setRoot('LoginPage');
+            loading.dismiss();
         }, err => {
+            loading.dismiss();
             if (err.code === 'ERROR') {
                 this.showAlert(err.message);
             } else {

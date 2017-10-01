@@ -19,6 +19,7 @@ export class IntroPage {
 
     ionViewDidLoad() {
         console.log('ionViewDidLoad IntroPage');
+        
         if (this.auth.usuario) {
             console.log('Usuário já logado, redirecionando');
             this.navCtrl.setRoot(HomePage);
