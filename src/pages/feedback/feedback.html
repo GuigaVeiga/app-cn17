@@ -1,18 +1,21 @@
 <ion-content>
-    <div id="menuFeedback"> 
+    <div id="menuFeedback">
         <button ion-button clear menuToggle>
           <ion-icon name="menu"></ion-icon>
           </button>
-      
-          <div id="img-nome-feed">
-            <img src="/assets/img/img-nome-feedback.png">
-          </div>
-       </div>
 
- <p>Quer deixar crítica? Sugestão? Elogiar? Sua Opinião é extremamente importante pra nós e
-    será fundamental para fazermos a próxima Conferência Nuvem ainda melhor! :)</p>
- 
- <ion-item padding>
-    <ion-textarea rows="10" cols="40" placeholder="Toque para começar a escrever. Max 300 caracteres" maxLength="300"></ion-textarea>
-  </ion-item>
+        <div id="img-nome-feed">
+            <img src="/assets/img/img-nome-feedback.png">
+        </div>
+    </div>
+
+    <p>Quer deixar crítica? Sugestão? Elogiar? Sua Opinião é extremamente importante pra nós e será fundamental para fazermos a próxima Conferência Nuvem ainda melhor! :)</p>
+
+    <ion-item padding>
+        <ion-textarea rows="10" cols="40" placeholder="Toque para começar a escrever. Max 300 caracteres" maxLength="300" [(ngModel)]="feedback"></ion-textarea>
+    </ion-item>
+
+    <div class="botao-login">
+        <button ion-button round block (click)="enviar()" color="violeta" medium>Enviar</button>
+    </div>
 </ion-content>

@@ -11,6 +11,7 @@ export class HttpService extends Http {
     ) {
         super(_backend, _defaultOptions);
 
+        console.log(this.authService.usuario);
         if (this.authService.usuario)
             this._defaultOptions.headers.append('Authorization', `Bearer ${this.authService.usuario.access_token}`);
     }
