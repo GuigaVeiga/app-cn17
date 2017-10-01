@@ -1,15 +1,24 @@
 page-programacao {
 
-    ion-content{
-        background: url(/assets/img/backSlide.png) !important;
-    } 
-    
-    #menuProgramacao{
-        background-image: url(/assets/img/logo.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        height: 35%;
-    }
+  #menuProgramacao{
+      background-image: url(/assets/img/img-programacao.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 25%;
+  }
+  
+  #img-nome-prog{
+      position: absolute;
+      top: 4%;
+  }
+
+  #button-segment{
+    position: absolute;
+    top: 18%;
+  }
+
+  h2, label{ 
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+  }
 
 }
