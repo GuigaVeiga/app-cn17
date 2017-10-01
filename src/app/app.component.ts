@@ -7,10 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ProgramacaoPage } from "../pages/programacao/programacao";
 import { PalestrantesPage } from "../pages/palestrantes/palestrantes";
 import { BandasPage } from "../pages/bandas/bandas";
-import { MapaTeatroPage } from "../pages/mapa-teatro/mapa-teatro";
-import { ComidaPage } from "../pages/comida/comida";
-import { LojaPage } from "../pages/loja/loja";
 import { FeedbackPage } from "../pages/feedback/feedback";
+import { OracaoPage } from "../pages/oracao/oracao";
 import { LocalPage } from "../pages/local/local";
 
 @Component({
@@ -32,10 +30,8 @@ export class MyApp {
       { title: 'Programação', component: ProgramacaoPage, icon: "paper" },
       { title: 'Palestrantes', component: PalestrantesPage, icon: "mic" },
       { title: 'Atrações', component: BandasPage, icon: "people" },
-      { title: 'Mapa do Teatro', component: MapaTeatroPage, icon: "map" },
       { title: 'Como chegar', component: LocalPage, icon: "pin" },
-      { title: 'Comida', component: ComidaPage, icon: "restaurant" },
-      { title: 'Loja', component: LojaPage, icon: "cart" },
+      { title: 'Oração', component: OracaoPage, icon: "cloud-upload" },
       { title: 'Feedback', component: FeedbackPage, icon: "thumbs-up" }
     ];
 

@@ -17,11 +17,12 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
 import { ProgramacaoPage } from "../pages/programacao/programacao";
 import { PalestrantesPage } from "../pages/palestrantes/palestrantes";
 import { BandasPage } from "../pages/bandas/bandas";
-import { MapaTeatroPage } from "../pages/mapa-teatro/mapa-teatro";
-import { ComidaPage } from "../pages/comida/comida";
-import { LojaPage } from "../pages/loja/loja";
 import { FeedbackPage } from "../pages/feedback/feedback";
 import { LocalPage } from "../pages/local/local";
+import { EixoFePage } from "../pages/eixo-fe/eixo-fe";
+import { EixoAmorPage } from "../pages/eixo-amor/eixo-amor";
+import { EixoEsperancaPage } from "../pages/eixo-esperanca/eixo-esperanca";
+import { OracaoPage } from "../pages/oracao/oracao";
 
 @NgModule({
   declarations: [
@@ -30,11 +31,12 @@ import { LocalPage } from "../pages/local/local";
     ProgramacaoPage,
     PalestrantesPage,
     BandasPage,
-    MapaTeatroPage,
-    ComidaPage,
-    LojaPage,
     FeedbackPage,
-    LocalPage
+    LocalPage,
+    OracaoPage,
+    EixoFePage,
+    EixoAmorPage,
+    EixoEsperancaPage
   ],
   imports: [
     BrowserModule,
@@ -52,11 +54,12 @@ import { LocalPage } from "../pages/local/local";
     ProgramacaoPage,
     PalestrantesPage,
     BandasPage,
-    MapaTeatroPage,
-    ComidaPage,
-    LojaPage,
     FeedbackPage,
-    LocalPage
+    LocalPage,
+    OracaoPage,
+    EixoFePage,
+    EixoAmorPage,
+    EixoEsperancaPage
   ],
   providers: [
     Facebook,
