@@ -18,12 +18,12 @@ export class IntroPage {
     ) { }
 
     ionViewDidLoad() {
-        console.log('ionViewDidLoad IntroPage');
+        console.log('ionViewDidLoad IntroPage', this.auth.usuario);
         
-        if (this.auth.usuario) {
+        this.auth.onChange = () => {
             console.log('Usuário já logado, redirecionando');
             this.navCtrl.setRoot(HomePage);
-        }
+        };
     }
 
     goToLoginPage() {

@@ -1,6 +1,6 @@
 {
   "name": "CN17",
-  "app_id": "",
+  "app_id": "c9d4740d",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

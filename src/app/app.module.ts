@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabaseModule } from "angularfire2/database";
 import { XHRBackend, RequestOptions } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,7 +14,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IntroPageModule } from "../pages/intro/intro.module";
 import { LoginPageModule } from "../pages/login/login.module";
-import { FIREBASE_CONFIG } from "./app.firebase.config";
 import { ProgramacaoPage } from "../pages/programacao/programacao";
 import { PalestrantesPage } from "../pages/palestrantes/palestrantes";
 import { BandasPage } from "../pages/bandas/bandas";
@@ -46,9 +43,7 @@ import { OracaoPage } from "../pages/oracao/oracao";
     IonicModule.forRoot(MyApp),
     IntroPageModule,
     LoginPageModule,
-    AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireAuthModule,
-    AngularFireDatabaseModule
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
