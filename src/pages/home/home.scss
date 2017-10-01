@@ -1,12 +1,69 @@
 page-home {
-
-    #menuSobre{
-        background-image: url(/assets/img/capa-sobre.jpg);
+   
+    #menuHome{
+        background-image: url(/assets/img/img-home.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
-        height: 55%;
+        height: 70%;
     }
+
+    #logo{
+        width: 50%;
+        height: 50%;
+        position:absolute;
+        top:15%;
+        left:40%;
+        margin-top:-50px;
+        margin-left:-50px;
+    }
+
+    #nome-conf-home{
+        position:absolute;
+        margin-top:175px;
+        margin-left:30px;
+    }
+    
+    #data-home{
+        position:absolute;
+        margin-top:190px;
+        margin-left:-15px;
+    }
+
+    #nome-outubro-home{
+        margin-top:190px;
+        margin-left:180px;
+    }
+
+    #img-nosvemos{
+        position: absolute;
+        top: 49%;
+        left: 25px;
+    }
+
+    h2{
+        margin-left: 06px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 65px;
+        color: #F2187B;
+        opacity: 0.5;
+    }
+
+    #img-count-hrs, #img-count-min, #img-count-seg{
+        position: absolute;
+        top: 54%;
+    }
+    #img-count-hrs{
+        left: 95px;
+    }
+    #img-count-min {
+        left: 183px;
+    }
+    #img-count-seg {
+        left: 263px;
+    }
+
     #sobre-cn17 {
         text-align: justify;
         font-size: 12pt;
@@ -14,7 +71,13 @@ page-home {
     }
 
     #bemvindo-home{
+        margin-top: 05px;
         text-align: center;
+    }
+
+    p{
+        margin-right: 12px;
+        margin-left: 12px;
     }
 
     .destaque-home{
