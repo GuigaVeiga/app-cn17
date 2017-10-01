@@ -1,21 +1,22 @@
 <ion-content>
 
-    <div id="menuOracao"> 
+    <div id="menuOracao">
         <button ion-button clear menuToggle>
           <ion-icon name="menu"></ion-icon>
           </button>
-      
-          <div id="img-nome-oracao">
+
+        <div id="img-nome-oracao">
             <img src="/assets/img/img-nome-oracao.png">
-          </div>
-       </div>
+        </div>
+    </div>
 
- <p>Tem algum pedido de oração? Quer agradecer por algo? Use o espaço abaixo e conte  pra nós 
-   oque está em seu coração. Será um prazer poder orar por sua vida. Deus te abençoe!
- </p>
- 
- <ion-item padding>
-    <ion-textarea rows="10" cols="40" placeholder="Toque para começar a escrever. Max 300 caracteres" maxLength="300"></ion-textarea>
-  </ion-item>
+    <p>Tem algum pedido de oração? Quer agradecer por algo? Use o espaço abaixo e conte pra nós o que está em seu coração. Será um prazer poder orar por sua vida. Deus te abençoe!</p>
 
+    <ion-item padding>
+        <ion-textarea rows="10" cols="40" placeholder="Toque para começar a escrever. Max 300 caracteres" maxLength="300" [(ngModel)]="pedido"></ion-textarea>
+    </ion-item>
+
+    <div class="botao-login">
+        <button ion-button round block (click)="enviar()" color="violeta" medium>Enviar</button>
+    </div>
 </ion-content>

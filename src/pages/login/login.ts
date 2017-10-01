@@ -47,7 +47,6 @@ export class LoginPage {
             this.navCtrl.setRoot('LoginPage');
         }, err => {
             if (err.code === 'ERROR') {
-                console.log('erro:', err);
                 this.showAlert(err.message);
             } else {
                 this.showAlert('Ops, não foi possível realizar o cadastro, tente novamente mais tarde');
@@ -57,7 +56,6 @@ export class LoginPage {
     }
 
     showAlert(message: string): void {
-        console.log('toast:', message);
         let alert = this.alertCtrl.create({
             title: 'Erro',
             subTitle: message,

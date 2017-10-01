@@ -4,10 +4,13 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from "angularfire2/database";
+import { Http, Request, RequestOptionsArgs, Response, XHRBackend, RequestOptions, ConnectionBackend, Headers } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Facebook } from '@ionic-native/facebook';
+import { HttpService } from '../services/http.service';
+import { AuthService } from '../services/auth.service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -65,7 +68,14 @@ import { OracaoPage } from "../pages/oracao/oracao";
     Facebook,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    {
+        provide: HttpService,
+        useFactory: (backend: XHRBackend, defaultOptions: RequestOptions, authService: AuthService) => {
+          return new HttpService(backend, defaultOptions, authService);
+        },
+        deps: [ XHRBackend, RequestOptions, AuthService]
+      }
   ]
 })
 export class AppModule {}
