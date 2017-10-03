@@ -75,4 +75,14 @@ page-eixo-fe,  page-eixo-esperanca, page-eixo-amor {
           max-height: 100px !important; //any size 
         }
       }
-    }      
+   
+
+ }
+
+ @font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Proxima Nova'), local('Proxima-Nova'), url("../assets/fonts/ProximaNova-Bold.otf") format('woff2');
+}
+         
