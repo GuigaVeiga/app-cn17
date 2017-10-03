@@ -1,19 +1,25 @@
 <ion-menu [content]="content">
-    <ion-header>
-        <ion-toolbar>
-            <ion-title>Menu</ion-title>
-        </ion-toolbar>
-    </ion-header>
 
-    <ion-content>
-        <ion-list>
-            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-                <ion-icon [name]="p.icon" item-left></ion-icon>
-                {{p.title}}
-            </button>
-            <button menuClose ion-item (click)="sair()">
-                <ion-icon name="key" item-left></ion-icon> Sair
-            </button>
+    <ion-content id="img-content" style="background-image: url(../assets/img/img-menu.png);
+     background-repeat: no-repeat; background-size: cover;">
+        <p style="position: relative; top: 15px; left: 70px; color: cyan; 
+        font-size: 12px; font-weight: bold">
+          MENU
+        </p>
+        <ion-list no-lines>
+                <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" 
+                style="background: transparent !important; margin-left: 20px;">
+                <p style="color: white; font-size: 18px; font-weight: bold">
+                    <ion-icon [name]="p.icon" item-left></ion-icon>
+                    {{p.title}}
+                </p>
+                </button>
+                <button menuClose ion-item (click)="sair()" style="background: transparent !important">
+                    <p style="color: white; font-size: 18px; font-weight: bold;  margin-left: 20px;">
+                        <ion-icon name="key" item-left></ion-icon>
+                        Sair
+                    </p>
+                </button>
         </ion-list>
     </ion-content>
 

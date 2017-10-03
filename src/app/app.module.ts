@@ -23,6 +23,10 @@ import { EixoFePage } from "../pages/eixo-fe/eixo-fe";
 import { EixoAmorPage } from "../pages/eixo-amor/eixo-amor";
 import { EixoEsperancaPage } from "../pages/eixo-esperanca/eixo-esperanca";
 import { OracaoPage } from "../pages/oracao/oracao";
+import { BandaNuvemPage } from "../pages/banda-nuvem/banda-nuvem";
+import { BandaSaronPage } from "../pages/banda-saron/banda-saron";
+import { BandaBarukPage } from "../pages/banda-baruk/banda-baruk";
+import { BandaNemerPage } from "../pages/banda-nemer/banda-nemer";
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { OracaoPage } from "../pages/oracao/oracao";
     OracaoPage,
     EixoFePage,
     EixoAmorPage,
-    EixoEsperancaPage
+    EixoEsperancaPage,
+    BandaNuvemPage,
+    BandaSaronPage,
+    BandaBarukPage,
+    BandaNemerPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +65,11 @@ import { OracaoPage } from "../pages/oracao/oracao";
     OracaoPage,
     EixoFePage,
     EixoAmorPage,
-    EixoEsperancaPage
+    EixoEsperancaPage,
+    BandaNuvemPage,
+    BandaSaronPage,
+    BandaBarukPage,
+    BandaNemerPage
   ],
   providers: [
     Facebook,
