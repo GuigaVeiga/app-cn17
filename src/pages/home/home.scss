@@ -5,14 +5,14 @@ page-home {
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
-        height: 70%;
+        height: 50%;
     }
 
     #logo{
         width: 50%;
         height: 50%;
         position:absolute;
-        top:15%;
+        top:12%;
         left:40%;
         margin-top:-50px;
         margin-left:-50px;
@@ -20,52 +20,27 @@ page-home {
 
     #nome-conf-home{
         position:absolute;
-        margin-top:175px;
+        margin-top:165px;
         margin-left:30px;
     }
     
     #data-home{
         position:absolute;
-        margin-top:190px;
-        margin-left:-15px;
+        margin-top:180px;
+        margin-left:-11px;
     }
 
     #nome-outubro-home{
-        margin-top:190px;
-        margin-left:180px;
-    }
-
-    #img-nosvemos{
         position: absolute;
-        top: 49%;
-        left: 25px;
+        margin-top:180px;
+        margin-left:182px;
     }
 
-    h2{
-        margin-left: 06px;
-        text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 65px;
-        color: #F2187B;
-        opacity: 0.5;
-    }
-
-    #img-count-hrs, #img-count-min, #img-count-seg{
-        position: absolute;
-        top: 54%;
-    }
-    #img-count-hrs{
-        left: 95px;
-    }
-    #img-count-min {
-        left: 183px;
-    }
-    #img-count-seg {
-        left: 263px;
-    }
 
     #sobre-cn17 {
         text-align: justify;
+        margin-right: 3px;
+        margin-left: 3px;
         font-size: 12pt;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }

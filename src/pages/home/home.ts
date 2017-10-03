@@ -1,6 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'page-home',
@@ -8,6 +7,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class HomePage {
   
+  /*
   private eventDate: Date = new Date("2017, 10, 06 19:00:00");
   private diff: number;
   private countDownResult: number;
@@ -15,9 +15,10 @@ export class HomePage {
   private hours: number;
   private minutes: number;
   private seconds: number;
+  */
 
   constructor(public navCtrl: NavController, public navParams: NavParams, elm: ElementRef) {
-    Observable.interval(1000).map((x) => {
+   /* Observable.interval(1000).map((x) => {
       this.diff = Math.floor((this.eventDate.getTime() - new Date().getTime()) / 1000);
     }).subscribe((x) => {
       this.days = this.getDays(this.diff);
@@ -25,10 +26,12 @@ export class HomePage {
       this.minutes = this.getMinutes(this.diff);
       this.seconds = this.getSeconds(this.diff);
     });
+
+    */
  
   }
 
-  getDays(t) {
+ /* getDays(t) {
     var days;
     days = Math.floor(t / 86400);
 
@@ -68,5 +71,6 @@ export class HomePage {
     return seconds;
   }
 
+*/
 
 }
