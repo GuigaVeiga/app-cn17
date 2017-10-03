@@ -1,25 +1,26 @@
 page-bandas {
-    .scroll-content {
-        overflow: hidden;
-      }
 
-    ion-content{
-        background: url(/assets/img/backSlide.png) !important;
+    #menuAtracoes{
+        background-image: url(/assets/img/img-programacao.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 22%;
     }
     
-    #menuBandas{
-        position: relative;
-    }
-
-    img {
+    #img-atracoes-nome{
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 22px;
+        left: 20px;
     }
 
-    h2, p {
-        text-align: center justify;
-        color: aliceblue; 
+    
+    img {
+        width: 100%; 
+        
+    }
+
+    #rede-nuvem, #rosa-de-saron, #jonathan-nemer, #paulo-baruk{
+        height: 19%;
     }
 
 }

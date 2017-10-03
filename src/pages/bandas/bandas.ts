@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the BandasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { BandaNuvemPage } from "../banda-nuvem/banda-nuvem";
+import { BandaSaronPage } from "../banda-saron/banda-saron";
+import { BandaBarukPage } from "../banda-baruk/banda-baruk";
+import { BandaNemerPage } from "../banda-nemer/banda-nemer";
 
 @IonicPage()
 @Component({
@@ -19,7 +16,22 @@ export class BandasPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BandasPage');
+  }
+
+  goTopageNuvem(){
+    this.navCtrl.push(BandaNuvemPage);
+  }
+
+  goTopageSaron(){
+    this.navCtrl.push(BandaSaronPage);
+  }
+
+  goTopageNemer(){
+    this.navCtrl.push(BandaNemerPage);
+  }
+
+  goTopageBaruk(){
+    this.navCtrl.push(BandaBarukPage);
   }
 
 }
