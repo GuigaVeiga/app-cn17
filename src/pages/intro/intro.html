@@ -1,53 +1,54 @@
-<ion-content padding>
+<ion-content>
 
-    <ion-slides pager spaceBetween="8">
-        
-          <ion-slide>
-            <img src="../assets/img/logo.png">
-            <img src="../assets/img/bem-vindo.png">
-            <br>
-            <div>
-            <p>Esse é o aplicativo da Conferência Nuvem 2017.
-            Com ele você não vai ficar por fora de nada.
-            Deslize para o lado e saiba o que você vai
-            encontrar aqui! 
-            </p>
-            </div>
-          </ion-slide>
-        
-          <ion-slide>
-            <img src="../assets/img/slide-2.png">
-            <img src="../assets/img/fique-por-dentro.png">
-            <div>
-            <p>
-              Com ele você vai poder conhecer um pouco mais
-              de nossa história, conferir toda a programação,
-              horários das palestras e shows. Saber onde
-              e o que comer, acessar o mapa do teatro,
-              fazer doação e muito mais! 
-            </p>
-            </div>
-          </ion-slide>
-        
-          <!--<ion-slide>
-              <img src="../assets/img/slide-3.png">
-              <img src="../assets/img/faca-seu-check-in.png">
-              <div>
-              <p>
-                Se você é daqueles que não quer perder tempo
-              nas filas, você vai amar nosso app!</p>
-              </div>
-            </ion-slide>-->
+  <ion-slides pager spaceBetween="8">
+    <div id="img-slide-1">
+      <ion-slide>
+        <div id="logo-slide-1">
+          <img src="../assets/img/logo.png">
+        </div>
+        <div class="logos-slides">
+          <img src="../assets/img/bem-vindo.png">
+        </div>
+        <div>
+          <p>Esse é o aplicativo da Conferência Nuvem 2017. Com ele você não vai ficar por fora de nada. Deslize para o lado
+            e saiba o que você vai encontrar aqui!
+          </p>
+        </div>
 
-            <ion-slide>
-              <img src="../assets/img/logo.png">
-              <img src="../assets/img/estamos-prontos.png">
-              <br><br>
-              <button ion-button color="secondary" round block medium (click)="goToLoginPage()">
+      </ion-slide>
+    </div>
+
+    <div id="img-slide-2">
+      <ion-slide>
+        <img src="../assets/img/slide-2.png">
+
+        <div class="logos-slides">
+          <img src="../assets/img/fique-por-dentro.png">
+        </div>
+          <p>
+            Com ele você vai poder conhecer um pouco mais de nossa história, conferir toda a programação, 
+            horários das palestras e shows. Saber onde e o que comer, acessar o mapa do teatro, fazer 
+            doação e muito mais!
+          </p>
+      </ion-slide>
+    </div>
+
+    <div id="img-slide-3">
+      <ion-slide pandding>
+        <div id="logo-nuvem-slide3">
+        <img src="../assets/img/logo.png">
+        </div>
+        <div class="logo-slides3">
+        <img src="../assets/img/estamos-prontos.png">
+        </div>
+        
+        
+        <button ion-button color="primary" round block medium (click)="goToLoginPage()">
                 Sim! \\o/
-              </button>
-              </ion-slide>
-        
-        </ion-slides>
+         </button> 
+    
+      </ion-slide>
+    </div>
+  </ion-slides>
 
 </ion-content>
