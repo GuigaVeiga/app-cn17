@@ -1,24 +1,25 @@
 <ion-content>
  
- <div id="menuFe"> 
-  <button ion-button clear menuToggle>
+ <div class="menuPalest"> 
+  <button ion-button clear (click)="goToPage()">
     <ion-icon name="arrow-back"></ion-icon>
       <p id="back">VOLTAR</p>
     </button>
 
-    <div id="img-nome-fe">
-      <img src="/assets/img/img-nome-eixo-fe.png">
+    <div class="img-nome-eixo">
+      <img src="../assets/img/img-nome-eixo-fe.png">
     </div>
  </div>
 
  <ion-list>
     <ion-item padding *ngFor="let p of palestrantes" text-wrap (click)="toggleGroup(p)" >
+        <ion-icon item-right [name]="p.icon"></ion-icon>
       <ion-avatar item-start>
         <img [src]="p.img">
       </ion-avatar>
-      <ion-icon color="primary" item-right [name]="p.icon"></ion-icon>
-      <h2> {{ p.nome }}</h2>
-      <div *ngIf="p.showDetails">{{ p.sobre }}</div>
+      <h2 class="nomeP"> {{ p.nome }}</h2>
+      <p class="sub"> {{ p.subtitulo }} </p>
+      <div class="sobre" *ngIf="p.showDetails">{{ p.sobre }}</div>
     </ion-item>
   </ion-list>
  
