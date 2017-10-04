@@ -32,7 +32,6 @@
         "cordova-plugin-browsertab": "^0.2.0",
         "cordova-plugin-buildinfo": "^2.0.1",
         "cordova-plugin-compat": "^1.0.0",
-        "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-facebook4": "^1.9.1",
         "cordova-plugin-geolocation": "^2.4.3",
@@ -67,7 +66,6 @@
                 "APP_NAME": "CN17"
             },
             "cordova-plugin-geolocation": {},
-            "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
