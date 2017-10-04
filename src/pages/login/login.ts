@@ -59,6 +59,7 @@ export class LoginPage {
 
         this.auth.cadastrar(user, profile).then(res => {
             this.navCtrl.setRoot('LoginPage');
+            this.showAlertConfirm();
             loading.dismiss();
         }, err => {
             loading.dismiss();
@@ -75,6 +76,14 @@ export class LoginPage {
         let alert = this.alertCtrl.create({
             title: 'Erro',
             subTitle: message,
+            buttons: ['OK']
+        });
+        alert.present();
+    }
+
+    showAlertConfirm(): void {
+        let alert = this.alertCtrl.create({
+            title: 'Cadastro Realizado com Sucesso',
             buttons: ['OK']
         });
         alert.present();
