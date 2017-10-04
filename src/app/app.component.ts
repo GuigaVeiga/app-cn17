@@ -3,6 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 import { HomePage } from '../pages/home/home';
 import { ProgramacaoPage } from "../pages/programacao/programacao";
 import { PalestrantesPage } from "../pages/palestrantes/palestrantes";
@@ -46,10 +47,14 @@ export class MyApp {
 
     initializeApp(): void {
         this.platform.ready().then(() => {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            this.statusBar.styleDefault();
-            this.splashScreen.hide();
+            let funcaoRetorno = (data) => {
+               console.log('Notificações: ' + JSON.stringify(data));
+            };
+      
+            window["plugins"].OneSignal.startInit("676ee2c6-f112-496c-967d-34333c5ea2e4",
+                "858973603020")
+                .handleNotificationOpened(funcaoRetorno)
+                .endInit();
         });
     }
 
