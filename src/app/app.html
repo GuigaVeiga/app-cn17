@@ -1,6 +1,6 @@
 <ion-menu [content]="content">
 
-    <ion-content id="img-content" style="background-image: url(../assets/img/img-menu.png);
+    <ion-content id="img-content" style="background-image: url(assets/img/img-menu.png);
      background-repeat: no-repeat; background-size: cover;">
         <p style="position: relative; top: 15px; left: 70px; color: cyan; 
         font-size: 12px; font-weight: bold">
@@ -8,14 +8,14 @@
         </p>
         <ion-list no-lines>
                 <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" 
-                style="background: transparent !important; margin-left: 20px;">
+                style="background: transparent !important; margin-left: 10px;">
                 <p style="color: white; font-size: 18px; font-weight: bold">
                     <ion-icon [name]="p.icon" item-left></ion-icon>
                     {{p.title}}
                 </p>
                 </button>
-                <button menuClose ion-item (click)="sair()" style="background: transparent !important">
-                    <p style="color: white; font-size: 18px; font-weight: bold;  margin-left: 20px;">
+                <button menuClose (click)="sair()" style="background: transparent !important">
+                    <p style="color: white; font-size: 18px; font-weight: bold; margin-top: 30px; margin-left: 20px;">
                         <ion-icon name="key" item-left></ion-icon>
                         Sair
                     </p>

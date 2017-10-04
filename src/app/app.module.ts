@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { Facebook } from '@ionic-native/facebook';
 import { HttpService } from '../services/http.service';
 import { AuthService } from '../services/auth.service';
+import { OneSignal } from '@ionic-native/onesignal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -74,6 +75,7 @@ import { BandaNemerPage } from "../pages/banda-nemer/banda-nemer";
   providers: [
     Facebook,
     StatusBar,
+    OneSignal,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     {

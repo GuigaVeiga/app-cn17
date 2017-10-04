@@ -1,16 +1,16 @@
-page-programacao {
+page-programacao { 
 
   #menuProgramacao{
-      background-image: url(/assets/img/img-programacao.png);
+      background-image: url(../assets/img/img-programacao.png);
       background-repeat: no-repeat;
       background-size: 100%;
-      height: 25%;
+      height: 22%;
   }
 
  
   #img-nome-prog{
       position: absolute;
-      top: 4%;
+      top: 3%;
   }
 
   #button-segment{
@@ -19,7 +19,7 @@ page-programacao {
   }
 
   h2, label{ 
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
 }

@@ -22,7 +22,7 @@ export class EixoEsperancaPage {
           subtitulo:"Presidente e Líder do Sistema Cidade Viva",
           sobre: "Sérgio Queiroz, mais conhecido como pastor Sérgio, é presidente e líder do Sistema Cidade Viva, que trabalha com a dignificação do ser humano; Doutor em Teologia pela Trinity University; Teólogo pelo Instituto Betel Brasileiro; Procurador da Fazenda Nacional, Mestre em Filosofia; Pensador e Cristão Reformado.",
           img: "assets/img/sergio-queiroz.png",
-         icon: "arrow-forward",
+         icon: "ios-arrow-forward",
           showDetails: false
         },
         {
@@ -30,7 +30,7 @@ export class EixoEsperancaPage {
           subtitulo:"Fundador da Comunidade da Graça e idealizador do Usina 21",
           sobre: "Pastor da Rede Nuvem ( Ministério de jovens da Cidade Viva ); Bacharel em Direito, Mestre em Direitos Humanos e em Gestão de Organizações Aprendentes. Marido, pai da Bella.",
           img: "assets/img/thiago-dutra.png",
-         icon: "arrow-forward",
+         icon: "ios-arrow-forward",
           showDetails: false
         }
       ]
@@ -42,10 +42,10 @@ export class EixoEsperancaPage {
     toggleGroup(palestrantes) {
       if (palestrantes.showDetails) {
             palestrantes.showDetails = false;
-            palestrantes.icon = 'arrow-forward';
+            palestrantes.icon = 'ios-arrow-forward';
       } else {
         palestrantes.showDetails = true;
-        palestrantes.icon = 'arrow-down';
+        palestrantes.icon = 'ios-arrow-down';
       }
     }
 

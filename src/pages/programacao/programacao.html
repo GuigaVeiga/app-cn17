@@ -4,20 +4,20 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
-  <div id="img-nome-prog">
-    <img src="/assets/img/img-programacao-nome.png">
-  </div>
+    <div id="img-nome-prog">
+      <img src="assets/img/img-programacao-nome.png">
+    </div>
 
-  <div>
-  <ion-segment id="button-segment" [(ngModel)]="progamacaoNuvem" ion-text color="light">
-      <ion-segment-button value="dia1">
-        PRIMEIRO DIA
-      </ion-segment-button>
-      <ion-segment-button value="dia2">
-        SEGUNDO DIA
-      </ion-segment-button>
-    </ion-segment>
-  </div>    
+    <div>
+      <ion-segment id="button-segment" [(ngModel)]="progamacaoNuvem" ion-text color="light">
+        <ion-segment-button value="dia1">
+          PRIMEIRO DIA
+        </ion-segment-button>
+        <ion-segment-button value="dia2">
+          SEGUNDO DIA
+        </ion-segment-button>
+      </ion-segment>
+    </div>
 
   </div>
 
@@ -25,38 +25,39 @@
   <div [ngSwitch]="progamacaoNuvem">
     <ion-list *ngSwitchCase="'dia1'">
       <ion-item>
-        <h2>Cadastramento</h2>
-        <label item-end>19h</label>
-        <p>Cadastramento dos conferencistas.</p>
+        <h2>Check-in</h2>
+        <label item-end>18h30</label>
+        <p>Check-in dos conferencistas.</p>
       </ion-item>
       <ion-item>
-        <h2>Abertura</h2>
-        <label item-end>20h</label>
-        <p>Abertura da #CN17.</p>
+        <h2>Momento Nuvem</h2>
+        <label item-end>19h30</label>
+        <p>Apresentações artísticas da #CN17.</p>
       </ion-item>
       <ion-item>
-        <h2>Show - Rede Nuvem</h2>
-        <label item-end>20h15</label>
-        <p>Banda Rede Nuvem da Cidade Viva.</p>
+        <h2>Mensagem abertura</h2>
+        <label item-end>19h50</label>
+        <p>Abertura Nuvem com Thiago Dutra
+        </p>
       </ion-item>
       <ion-item>
-        <h2>Palestra Sérgio Queiroz</h2>
-        <label item-end>21h</label>
-        <p>Eixo Esperança.</p>
+        <h2>Palestra 1 - Pr. Sérgio</h2>
+        <label item-end>20h00</label>
+        <p>Esperança.</p>
       </ion-item>
       <ion-item>
         <h2>Intervalo</h2>
-        <label item-end>21h45</label>
+        <label item-end>20h45</label>
         <p>Hora de encher o buxo.</p>
       </ion-item>
       <ion-item>
         <h2>Show - Rosa de Saron</h2>
-        <label item-end>22h</label>
+        <label item-end>21h30</label>
         <p>Banda Rosa de Saron</p>
       </ion-item>
       <ion-item>
         <h2>Encerramento</h2>
-        <label item-end>23h</label>
+        <label item-end>23h00</label>
         <p>Vlw. Flw galera!</p>
       </ion-item>
     </ion-list>
@@ -64,35 +65,135 @@
     <ion-list *ngSwitchCase="'dia2'">
       <ion-item>
         <h2>Abertura</h2>
-        <label item-end>20h</label>
-        <p>Abertura da #CN17.</p>
+        <label item-end>08h00</label>
+        <p>Abertura do 2° dia - #CN17.</p>
       </ion-item>
       <ion-item>
-        <h2>Show - Rede Nuvem</h2>
-        <label item-end>20h15</label>
-        <p>Banda Rede Nuvem da Cidade Viva.</p>
+        <h2>Momento Nuvem</h2>
+        <label item-end>09h00</label>
+        <p>Apresentações artísticas da #CN17.</p>
       </ion-item>
       <ion-item>
-        <h2>Palestra Sérgio Queiroz</h2>
-        <label item-end>21h</label>
-        <p>Eixo Esperança.</p>
+        <h2>Palestra 2: Yago Martins</h2>
+        <label item-end>09h10</label>
+        <p>Fé.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Marcos Botelho</h2>
+        <label item-end>09h55</label>
+        <p>Fé.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Alex Dias Ribeiro</h2>
+        <label item-end>10h15</label>
+        <p>Fé.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Carlos Alberto</h2>
+        <label item-end>10h35</label>
+        <p>Fé.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Eai Rede Nuvem</h2>
+        <label item-end>10h55</label>
+        <p>Momento de Sorteios</p>
+      </ion-item>
+      <ion-item>
+        <h2>Mesa Redonda</h2>
+        <label item-end>11h00</label>
+        <p>Mesa Redonda com os 04 participantes</p>
+      </ion-item>
+
+      <ion-item>
+        <h2><b>Almoço</b></h2>
+        <label item-end>12h00</label>
+        <p>Hora de encher o bucho!</p>
+      </ion-item>
+      <ion-item>
+        <h2>Momento Nuvem</h2>
+        <label item-end>14h00</label>
+        <p>Apresentações artísticas da #CN17.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Palestra 2: Mauricio Cunha</h2>
+        <label item-end>14h15</label>
+        <p>Amor.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Rafael Diedrich</h2>
+        <label item-end>15h00</label>
+        <p>Amor.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Felipe Vilela</h2>
+        <label item-end>15h20</label>
+        <p>Amor.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Guilherme Shelb</h2>
+        <label item-end>15h40</label>
+        <p>Amor.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Eai Rede Nuvem</h2>
+        <label item-end>16h00</label>
+        <p>Momento de Sorteios</p>
+      </ion-item>
+      <ion-item>
+        <h2>Mesa Redonda</h2>
+        <label item-end>16h30</label>
+        <p>Mesa Redonda com os 04 participantes</p>
+      </ion-item>
+      <ion-item>
+        <h2>Momento Desencontro</h2>
+        <label item-end>17h00</label>
+        <p>Momento Desencontroa com os 09 participantes</p>
+      </ion-item>
+
+      <ion-item>
+        <h2><b>Jantar</b></h2>
+        <label item-end>18h00</label>
+        <p>Hora de encher o buxo!</p>
+      </ion-item>
+
+      <ion-item>
+        <h2>Momento Nuvem</h2>
+        <label item-end>19h30</label>
+        <p>Apresentações artísticas da #CN17.</p>
+      </ion-item>
+      <ion-item>
+        <h2>Palestra 4: Thiago Dutra</h2>
+        <label item-end>20h00</label>
+        <p>Esperança.</p>
       </ion-item>
       <ion-item>
         <h2>Intervalo</h2>
-        <label item-end>21h45</label>
+        <label item-end>20h45</label>
         <p>Hora de encher o buxo.</p>
       </ion-item>
       <ion-item>
-        <h2>Show - Rosa de Saron</h2>
-        <label item-end>22h</label>
-        <p>Banda Rosa de Saron</p>
+        <h2>Stand UP: Jonathan Desconfinados</h2>
+        <label item-end>21h00</label>
+        <p>Esperança.</p>
       </ion-item>
       <ion-item>
+        <h2>Intervalo</h2>
+        <label item-end>22h00</label>
+        <p>Hora do Lanche galeraa!</p>
+      </ion-item>
+      <ion-item>
+        <h2>Show - Baruk</h2>
+        <label item-end>22h30</label>
+        <p>Banda - Paulo Cesar Baruk</p>
+      </ion-item>
+
+      <ion-item>
         <h2>Encerramento</h2>
-        <label item-end>23h</label>
-        <p>Vlw. Flw galera!</p>
+        <label item-end>00h00</label>
+        <p>Vlw. Flw galera! Até 2019!</p>
       </ion-item>
     </ion-list>
+
 
   </div>
 
