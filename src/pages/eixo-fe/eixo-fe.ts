@@ -27,9 +27,17 @@ export class EixoFePage {
       },
       {
         nome: "Carlos Bezerra Jr.",
-        subtitulo:"Fundador da Comunidade da Graça e idealizador do Usina 21",
+        subtitulo:"Presidente da Comissão de Direitos Humanos da Assembleia Legislativa do Estado de São Paulo",
         sobre: "Carlos Bezerra Jr. é médico, deputado estadual pelo PSDB-SP, presidente da Comissão de Direitos Humanos da Assembleia Legislativa do Estado de São Paulo e filho do pastor, conferencista, escritor e fundador da Comunidade da Graça, Carlos Alberto de Quadros Bezerra. Carlos Bezerra Jr. é ainda o idealizador do Usina 21 - Jovens, Idéias e Transformação Social, um dos principais eventos voltados à juventude evangélica no País, que ocorre anualmente e discute a participação dos jovens na sociedade.",
         img: "assets/img/carlos-bezerra.png",
+        icon: "ios-arrow-forward",
+        showDetails: false
+      },
+      {
+        nome: "Marcos Botelho",
+        subtitulo:"Pastor do festival Rock no Vale",
+        sobre: "Missionário da Missão Jovens da Verdade e da SEPAL (Servindo Pastores e Líderes). Fundador e líder do ministério JV na Estrada que trabalha em congressos e acampamentos com recreação, teatro e preleção. Criador e professor do curso modular chamado Ministério com Juventude, livre e pós-graduação, realizado no seminário do JV/FLAM desde 2006. Fundador do ministério Terra dos Palhaços Brasil vinculado ao JV e a MPC. Pastor de Jovens e adolescentes da ipalpha e escreve na Ultimato, blog cristão. Ah, ele também é pastor da Rock no Vale, junto com Rafael Diedrich.",
+        img: "assets/img/marcos-botelho.png",
         icon: "ios-arrow-forward",
         showDetails: false
       },
@@ -38,15 +46,6 @@ export class EixoFePage {
         subtitulo:"Criador do canal Dois Dedos de Teologia",
         sobre: "Yago Martins é bacharel em Teologia pela Faculdade Teológica Sul-Americana (Londrina/PR), pós-graduando em Escola Austríaca de Economia pelo Centro Universitário Ítalo Brasileiro, em parceria com o Instituto Ludwig von Mises Brasil (São Paulo/SP) e estudante do Sacrae Theologiae Magister (Th.M) em Teologia Sistemática do Instituto Aubrey Clark (Fortaleza/CE).",
         img: "assets/img/yago-martins.png",
-        icon: "ios-arrow-forward",
-        showDetails: false
-      },
-
-      {
-        nome: "Rafael Diedrich",
-        subtitulo:"Fundador do festival Rock no Vale",
-        sobre: "Rafael é produtor, cantor, artista dedicado à educação e ama a integração entre a criatividade e a espiritualidade no meio educacional. É líder do Renasentido (projeto super legal que remixa músicas da harpa cristã). Não sei se você já está o reconhecendo, mas ele é o responsável por aquele super evento que acontece todos os anos em São Paulo. Isso mesmo, o Rock no Vale!",
-        img: "assets/img/rafael-driedrich.png",
         icon: "ios-arrow-forward",
         showDetails: false
       },

@@ -43,10 +43,10 @@ export class EixoAmorPage {
       },
 
       {
-        nome: "Marcos Botelho",
-        subtitulo:"Pastor do festival Rock no Vale",
-        sobre: "Missionário da Missão Jovens da Verdade e da SEPAL (Servindo Pastores e Líderes). Fundador e líder do ministério JV na Estrada que trabalha em congressos e acampamentos com recreação, teatro e preleção. Criador e professor do curso modular chamado Ministério com Juventude, livre e pós-graduação, realizado no seminário do JV/FLAM desde 2006. Fundador do ministério Terra dos Palhaços Brasil vinculado ao JV e a MPC. Pastor de Jovens e adolescentes da ipalpha e escreve na Ultimato, blog cristão. Ah, ele também é pastor da Rock no Vale, junto com Rafael Diedrich.",
-        img: "assets/img/marcos-botelho.png",
+        nome: "Rafael Diedrich",
+        subtitulo:"Fundador do festival Rock no Vale",
+        sobre: "Rafael é produtor, cantor, artista dedicado à educação e ama a integração entre a criatividade e a espiritualidade no meio educacional. É líder do Renasentido (projeto super legal que remixa músicas da harpa cristã). Não sei se você já está o reconhecendo, mas ele é o responsável por aquele super evento que acontece todos os anos em São Paulo. Isso mesmo, o Rock no Vale!",
+        img: "assets/img/rafael-driedrich.png",
         icon: "ios-arrow-forward",
         showDetails: false
       },

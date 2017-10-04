@@ -39,7 +39,7 @@ export class MyApp {
             { title: 'Palestrantes', component: PalestrantesPage, icon: "mic" },
             { title: 'Atrações', component: BandasPage, icon: "people" },
             { title: 'Como chegar', component: LocalPage, icon: "pin" },
-            { title: 'Oração', component: OracaoPage, icon: "cloud-upload" },
+            { title: 'Mesa Redonda', component: OracaoPage, icon: "ios-chatbubbles" },
             { title: 'Feedback', component: FeedbackPage, icon: "thumbs-up" }
         ];
 
