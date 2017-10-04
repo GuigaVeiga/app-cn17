@@ -5,7 +5,12 @@ page-login {
     
     ion-content{
         background: url(../assets/img/backSlide.png) !important;
-    } 
+    }
+   #logo-page-login {
+       margin-top: 10px;
+       margin-bottom: 40px;
+   }
+   
 
   ion-img, ion-item, ion-label, ion-toolbar, ion-segment-button {
     background-color: transparent !important;
@@ -38,6 +43,8 @@ page-login {
         color: #010125;
         height: 40px;
     }
+
+
 
 
     

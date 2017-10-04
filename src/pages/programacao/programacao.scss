@@ -10,16 +10,33 @@ page-programacao {
  
   #img-nome-prog{
       position: absolute;
-      top: 3%;
+      left: 10%;
+      top: -1%;
+      width: 350px;
+  }
+  .segment-md-light .segment-button.activated, .segment-md-light .segment-button.segment-activated{
+      margin-left: 3px;
+      margin-right: 3px;
+      font-size: 17px;
+      color: black;
+      background-color: #F0E6F0;
+      border: none;
+      border-radius: 25px;
+      height: 3.1rem;
+     
   }
 
+  .segment-md-light .segment-button {
+    font-size: 16px;
+  }
   #button-segment{
     position: absolute;
-    top: 18%;
+    top: 15%;
   }
 
   h2, label{ 
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 18px;
   }
 
 }

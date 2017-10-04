@@ -86,4 +86,9 @@ page-eixo-fe,  page-eixo-esperanca, page-eixo-amor {
     font-weight: 300;
     src: local('Proxima Nova'), local('Proxima-Nova'), url("../assets/fonts/ProximaNova-Bold.otf") format('woff2');
 }
+
+.ion-md-menu:before {
+    content: "\f32a";
+    font-size: 35px;
+}
          
