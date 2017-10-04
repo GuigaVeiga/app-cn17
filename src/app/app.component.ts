@@ -50,11 +50,13 @@ export class MyApp {
             let funcaoRetorno = (data) => {
                console.log('Notificações: ' + JSON.stringify(data));
             };
-      
-            window["plugins"].OneSignal.startInit("676ee2c6-f112-496c-967d-34333c5ea2e4",
-                "858973603020")
-                .handleNotificationOpened(funcaoRetorno)
-                .endInit();
+            
+            if (window['plugins'] && window["plugins"].OneSignal) {
+                window['plugins'].OneSignal
+                    .startInit('676ee2c6-f112-496c-967d-34333c5ea2e4', '858973603020')
+                    .handleNotificationOpened(funcaoRetorno)
+                    .endInit();
+            }
         });
     }
 
