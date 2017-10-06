@@ -31,7 +31,7 @@ export class OracaoPage {
         loading.present();
         this.sendPedidoOracao(this.pedido)
             .subscribe(res => {
-                this.showAlert('A paz do Senhor', 'Sua mensagem foi recebida com sucesso e será respondida o mais rápido possível');
+                this.showAlert('Obrigado', 'Sua pergunta foi enviada com sucesso');
                 this.pedido = '';
                 loading.dismiss();
             }, err => {
@@ -51,7 +51,7 @@ export class OracaoPage {
     
     sendPedidoOracao(pedido: string)
     {
-        return this.http.post('http://cidadeviva.space/api/v1/usuario/pedido-oracao', {
+        return this.http.post('http://cidadeviva.space/api/v1/usuario/mesa-redonda', {
             evento_id: 1,
             pedido: pedido
         });
