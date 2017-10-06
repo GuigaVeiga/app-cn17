@@ -49,29 +49,7 @@ export class OracaoPage {
         });
         alert.present();
     }
-
-    /*
-    send(recipient: string, subject: string, message: string) {
-        var requestHeaders = new Headers();
-        requestHeaders.append('Authorization', 'Basic key-703c0d7fa5f96ea0d4a75223be6c159c');
-        requestHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
-
-        this.http.post(new Request({
-            method: RequestMethod.Post,
-            url: 'https://api.mailgun.net/v3/cidadeviva.space/messages',
-            body: {
-                from: 'redenuvem@cidadeviva.space',
-                to: 'redenuvem@cidadeviva.org',
-                subject: 'Mesa Redonda',
-                text:pedido,
-            headers: requestHeaders
-        })).subscribe(success => {
-            console.log("SUCCESS -> " + JSON.stringify(success));
-        }, error => {
-            console.log("ERROR -> " + JSON.stringify(error));
-        });
-    }
-    */
+    
     sendPedidoOracao(pedido: string)
     {
         return this.http.post('http://cidadeviva.space/api/v1/usuario/mesa-redonda', {
