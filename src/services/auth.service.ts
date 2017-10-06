@@ -13,12 +13,14 @@ export class AuthService {
     public onChange: Function;
 
     constructor(private http: Http, private storage: Storage) {
-        this.storage.get('cn17_data').then(data => {
-            console.log('AuthService', data);
-            if (data) {
-                this.usuario = JSON.parse(data);
-                if (this.onChange) this.onChange();
-            }
+        this.storage.ready().then(res => {
+            this.storage.get('cn17_data').then(data => {
+                console.log('AuthService', data);
+                if (data) {
+                    this.usuario = JSON.parse(data);
+                    if (this.onChange) this.onChange();
+                }
+            });
         });
     }
 
